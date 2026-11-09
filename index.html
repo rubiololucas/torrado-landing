@@ -9,6 +9,7 @@
 <meta name="description" content="Ese negro amargo que creés que es «fuerte» es azúcar quemada. Lo que te despierta es la cafeína: Shock tiene el triple y sabe suave.">
 <link rel="preload" as="font" href="assets/trivial.woff" type="font/woff" crossorigin>
 <link rel="preload" as="image" href="assets/hero/p.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero/x.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXVTT7V8HH"></script>
@@ -555,7 +556,7 @@ footer{padding:26px 0 40px;text-align:center;font:400 11px/1.8 var(--mono);lette
       ctx.drawImage(P,dx,dy,dw,dh);
       if(!X.naturalWidth)return;
       const ph=(t%T)/T,top=B.y0-.05,bot=B.y1+.05;let mode='p',pos=0;
-      if(ph<.10)mode='p';else if(ph<.40){mode='tx';pos=bot-ss((ph-.10)/.30)*(bot-top)}else if(ph<.62)mode='x';else if(ph<.92){mode='tp';pos=bot-ss((ph-.62)/.30)*(bot-top)}else mode='p';
+      if(ph<.03)mode='p';else if(ph<.30){mode='tx';pos=bot-ss((ph-.03)/.27)*(bot-top)}else if(ph<.56)mode='x';else if(ph<.84){mode='tp';pos=bot-ss((ph-.56)/.28)*(bot-top)}else mode='p';
       if(mode==='p')return;
       const ly=dy+pos*dh;ctx.save();ctx.beginPath();
       if(mode==='x')ctx.rect(0,0,cw,ch);else if(mode==='tx')ctx.rect(0,ly,cw,ch);else ctx.rect(0,0,cw,ly);
@@ -566,11 +567,10 @@ footer{padding:26px 0 40px;text-align:center;font:400 11px/1.8 var(--mono);lette
     }
     P.onload=()=>{cv.classList.add('ready');draw(lastT)};
     P.src='assets/hero/p.webp';
-    const loadX=()=>{if(!X.src)X.src='assets/hero/x.webp'};
-    if(document.readyState==='complete')setTimeout(loadX,200);else addEventListener('load',()=>setTimeout(loadX,200));
+    X.src='assets/hero/x.webp';
     addEventListener('resize',size);size();
     if(RM)return;
-    const tick=ts=>{if((vis.heroStage===undefined||vis.heroStage>0)&&X.naturalWidth){if(started===null)started=ts;const t=ts-started-1200;draw(t<0?0:t)}requestAnimationFrame(tick)};requestAnimationFrame(tick);
+    const tick=ts=>{if((vis.heroStage===undefined||vis.heroStage>0)&&X.naturalWidth){if(started===null)started=ts;const t=ts-started-300;draw(t<0?0:t)}requestAnimationFrame(tick)};requestAnimationFrame(tick);
   })();
 
   /* 01: el grano se cubre con el scroll */
