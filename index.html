@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="robots" content="noindex,nofollow">
+<title>Shock Coffee — El buen café no es negro</title>
+<meta name="description" content="Ese negro amargo que creés que es «fuerte» es azúcar quemada. Lo que te despierta es la cafeína: Shock tiene el triple y sabe suave.">
+<link rel="preload" as="font" href="assets/trivial.woff" type="font/woff" crossorigin>
+<link rel="preload" as="image" href="assets/hero/p.webp" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXVTT7V8HH"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-GXVTT7V8HH');</script>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','511513174688645');fbq('track','PageView');fbq('track','ViewContent',{content_ids:['168965281'],content_type:'product',value:19900,currency:'ARS'});</script>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+@font-face{font-family:'Trivial';src:url('assets/trivial.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+:root{
+  --bg:#000;--s1:#0c0c0c;--s2:#141414;--line:rgba(232,238,246,.12);--line2:rgba(232,238,246,.26);
+  --tx:#fff;--tx2:#c9ccd1;--mute:#8d9198;--cold:#e8eef6;
+  --amber:#e39a4c;
+  --disp:Trivial,'Space Grotesk',Arial,sans-serif;--body:'Space Grotesk',Arial,sans-serif;--mono:'Space Mono',ui-monospace,Menlo,monospace;
+  --pad:20px;--col:680px
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.55 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.has-sticky{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+b,strong{font-weight:600;color:#fff}
+.am{color:var(--amber)}
+.wrap{max-width:var(--col);margin:0 auto;padding:0 var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---- barra superior + leído ---- */
+.top{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:48px}
+.top img{height:15px;width:auto}
+.read{display:flex;align-items:center;gap:10px;font:400 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.read i{display:block;width:56px;height:2px;background:var(--line);position:relative;overflow:hidden}
+.read i:after{content:'';position:absolute;inset:0;background:var(--cold);transform-origin:0 50%;transform:scaleX(var(--r,0))}
+.read b{color:var(--cold);font-weight:400;min-width:30px;text-align:right}
+
+/* ---- sistema editorial (mismo patrón que estemes) ---- */
+section{position:relative}
+.ch{padding-top:44px;padding-bottom:4px;text-align:center}
+.ch.left{text-align:left}.ch.left .h{max-width:12ch}.ch.left .sub,.ch.left .txt,.ch.left .punch{margin-left:0}.ch.left .quote{text-align:left;margin-left:0}.ch.left .bridge{align-items:flex-start}.ch.left .rev{margin-left:0}
+.eye{display:inline-flex;align-items:center;gap:8px;font:400 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#a3a7ad}
+.eye:before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px rgba(227,154,76,.8)}
+.h{margin:16px 0 0;font:400 clamp(27px,7.4vw,42px)/1.08 var(--disp);letter-spacing:.03em;text-transform:uppercase}
+.h span{display:block;color:var(--amber)}
+.sub{margin:12px auto 0;max-width:30ch;font:500 17px/1.4 var(--body);color:rgba(237,237,237,.72)}
+.txt{margin:18px auto 0;max-width:34ch;color:var(--tx2)}
+.txt+.txt{margin-top:12px}
+.punch{margin:22px auto 0;max-width:30ch;font:500 19px/1.4 var(--body);color:#fff}
+
+/* puente: píldora con pregunta + chevron (patrón de estemes) */
+.bridge{display:flex;flex-direction:column;align-items:center;gap:12px;padding:26px 0 0;text-decoration:none}
+.bridge span{display:inline-flex;align-items:center;gap:10px;min-height:48px;border:1px solid var(--line2);border-radius:14px;padding:12px 18px;font:600 15px/1.35 var(--body);color:#fff;background:#0b0b0b;max-width:32ch;text-align:left;transition:border-color .2s}
+.bridge span:after{content:'↓';font:400 15px/1 var(--mono);color:var(--cold);flex:0 0 auto}
+.hero .bridge span:after{display:none}
+.bridge i{display:none}.hero .bridge i{display:grid}
+.bridge i{width:40px;height:40px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center}
+.bridge i:before{content:'';width:8px;height:8px;border-right:1.5px solid var(--cold);border-bottom:1.5px solid var(--cold);transform:translateY(-2px) rotate(45deg)}
+.bridge:hover span{border-color:var(--cold)}
+@media (prefers-reduced-motion:no-preference){.bridge i{animation:nudge 2.4s ease-in-out infinite}}
+@keyframes nudge{0%,70%,100%{transform:none}80%{transform:translateY(5px)}}
+
+/* ---- escenas 3D ---- */
+.stage{position:relative;background:#000;overflow:hidden;margin:24px calc(var(--pad)*-1) 0;aspect-ratio:1/1;scroll-margin-top:56px}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .6s}
+.stage canvas.ready{opacity:1}
+.stage.w43{aspect-ratio:4/3}.stage.w1611{aspect-ratio:16/11}.stage.wh{aspect-ratio:6/5}
+.stage .vig{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,transparent 52%,rgba(0,0,0,.6) 100%)}
+.stage .gr{position:absolute;inset:-50%;z-index:2;pointer-events:none;background:url(assets/grain.png);opacity:.1;mix-blend-mode:overlay;animation:grain 1.2s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-4%)}60%{transform:translate(-4%,1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+.stage:before{content:'';position:absolute;left:0;right:0;top:0;height:76px;z-index:2;pointer-events:none;background:linear-gradient(#000 0,#000 30%,rgba(0,0,0,.6) 65%,transparent)}
+.stage .cn{position:absolute;width:16px;height:16px;z-index:4;pointer-events:none}
+.stage .cn.a{top:12px;left:12px;border-top:1px solid var(--cold);border-left:1px solid var(--cold)}
+.stage .cn.b{bottom:12px;right:12px;border-bottom:1px solid var(--cold);border-right:1px solid var(--cold)}
+.hud{position:absolute;z-index:4;font:400 12px/1.45 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:rgba(232,238,246,.86);pointer-events:none;text-shadow:0 0 6px #000,0 0 2px #000;font-variant-numeric:tabular-nums}
+.hud.tl{top:14px;left:36px;text-align:left}.hud.tr{top:14px;right:16px;text-align:right}.hud.bl{bottom:14px;left:16px}.hud.br{bottom:14px;right:36px;text-align:right}
+.hud b{font-weight:400;color:#fff;font-size:12px}.hud .a{color:var(--amber)}.hud .dim{color:rgba(232,238,246,.45)}
+.hud .ix{display:block;font-style:normal;font-size:10px;letter-spacing:.14em;opacity:.62;margin-bottom:3px}
+.bars{display:inline-grid;grid-template-columns:repeat(10,2px);gap:3px;height:10px;vertical-align:-1px;margin-right:6px}.bars i{background:rgba(232,238,246,.15)}.bars i.on{background:#fff}
+.hud .row{display:flex;align-items:center;justify-content:flex-end}
+
+/* ---- hero ---- */
+.hero{padding:16px 0 6px;text-align:center}
+.hero .h{margin-top:12px;font-size:clamp(30px,8.6vw,48px)}
+.hero .sub{margin-top:10px}
+.hero .stage{margin-top:10px;aspect-ratio:4/3}
+.hero .stage:before{display:none}
+.hhud{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font:400 11px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#a3a7ad}.hhud b{font-weight:400;color:var(--amber)}
+.proof{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 14px;margin:14px 0 0;font:400 12px/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:#c9ccd1}
+.proof span:before{content:'✓ ';color:var(--amber)}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;background:#fff;color:#000;border:0;font:400 13px/1.2 var(--disp);letter-spacing:.08em;text-transform:uppercase;padding:16px;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.985)}.btn:hover{background:var(--cold)}
+.btn[disabled]{opacity:.6}
+.hero .btn{margin-top:14px}
+.price{margin:10px 0 0;font-size:14px;color:var(--tx2)}.price b{font-weight:600}
+
+/* ---- tarjetas con esquinas (como los paneles de estemes) ---- */
+.card{position:relative;margin:24px auto 0;max-width:420px;padding:18px 18px 16px;background:var(--s1);border:1px solid var(--line);text-align:left}
+.card:before,.card:after{content:'';position:absolute;width:12px;height:12px}
+.card:before{top:-1px;left:-1px;border-top:1px solid var(--cold);border-left:1px solid var(--cold)}
+.card:after{bottom:-1px;right:-1px;border-bottom:1px solid var(--cold);border-right:1px solid var(--cold)}
+.card .k{display:block;font:400 12px/1.4 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.label{margin:10px 0 8px;padding:10px 0;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);font:400 14px/1.4 var(--disp);letter-spacing:.04em;text-transform:uppercase}
+.label mark{background:none;color:#fff;white-space:nowrap;border-bottom:1px solid var(--amber);padding:0 2px}
+.label mark:before{content:'[';color:var(--amber)}.label mark:after{content:']';color:var(--amber)}
+.card p{margin:0;font-size:15px;color:var(--tx2)}
+
+/* cita */
+.quote{margin:30px auto 0;max-width:34ch;text-align:center}
+.quote q{display:block;font:500 21px/1.35 var(--body);color:#fff;quotes:'«' '»'}
+.quote small{display:block;margin-top:10px;font:400 11px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+
+/* control del tostado */
+.ctrl{max-width:420px;margin:18px auto 0;text-align:left}
+.ctrl label{display:flex;justify-content:space-between;font:400 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.ctrl label b{color:var(--cold);font-weight:400}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:44px;background:transparent;margin:4px 0 0;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:1px;background:rgba(255,255,255,.28)}
+input[type=range]::-moz-range-track{height:1px;background:rgba(255,255,255,.28)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:32px;margin-top:-16px;border-radius:2px;background:linear-gradient(90deg,var(--cold) 0 9px,#000 9px 13px,var(--cold) 13px)}
+input[type=range]::-moz-range-thumb{width:22px;height:32px;border-radius:2px;border:0;background:linear-gradient(90deg,var(--cold) 0 9px,#000 9px 13px,var(--cold) 13px)}
+.ticks{position:relative;height:8px;margin-top:-14px;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,.4) 1px,transparent 1px) 0 0/33.2% 100% repeat-x}
+.stops{display:flex;justify-content:space-between;margin-top:10px;font:400 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+
+/* tabla 2 columnas */
+.vs{width:100%;max-width:440px;margin:26px auto 0;border-collapse:collapse;font-size:15px;text-align:left}
+.vs th{font:400 12px/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);padding:0 10px 10px;font-weight:400}
+.vs th.s{color:#fff}
+.vs td{padding:13px 10px;border-top:1px solid var(--line);color:var(--tx2);vertical-align:top}
+.vs td:first-child{font:400 12px/1.5 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#a3a7ad;width:30%}
+.vs td.s{color:#fff;font-weight:600;background:rgba(227,154,76,.07)}
+.vs tr:last-child td.s{color:var(--amber);font-size:17px}
+.how{margin:20px auto 0;max-width:34ch;font-size:15px;color:var(--tx2)}
+
+/* contador del 3 = 1 */
+.count{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0 0;border-top:1px solid var(--line2);margin-top:0;text-align:left}
+.count small{display:block;font:400 11px/1.5 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:#fff}
+.count small.u{color:#a3a7ad;font-size:11px}
+.count strong{font:400 28px/1 var(--mono);color:var(--amber);white-space:nowrap}
+
+/* reseña-puente */
+.pq{max-width:34ch;margin:26px auto 0;text-align:center}.pq q{display:block;font:500 17px/1.4 var(--body);color:#fff;quotes:'«' '»'}
+/* reseñas apiladas */
+.rev{max-width:440px;margin:26px auto 0;display:grid;gap:12px;text-align:left}
+.big{position:relative;padding:20px 18px;border:1px solid rgba(255,255,255,.14);background:#0b0b0b}
+.big q{display:block;font:500 19px/1.4 var(--body);color:#fff;quotes:'«' '»'}
+.who{display:block;margin-top:10px;font:400 11px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.msg{padding:14px 16px;background:#0b0b0b;border:1px solid rgba(255,255,255,.08);border-radius:4px 14px 14px 14px}
+.msg p{margin:0;font-size:15px;color:#e6e6e6}
+.msg .who{margin-top:8px}
+
+/* ---- compra ---- */
+.buy-sec{padding-top:8px}
+.prod{display:flex;gap:14px;align-items:center;max-width:440px;margin:18px auto 0;text-align:left}
+.prod img{width:72px;height:72px;object-fit:cover;background:#000;flex:0 0 auto;border:1px solid var(--line)}
+.prod b{display:block;font:400 15px/1.2 var(--disp);letter-spacing:.04em;text-transform:uppercase}
+.prod span{display:block;margin-top:4px;font-size:14px;color:var(--tx2)}
+form.buy{max-width:440px;margin:18px auto 0;text-align:left}
+fieldset{border:0;margin:0 0 14px;padding:0;min-width:0}
+legend{display:flex;gap:8px;align-items:baseline;padding:0;margin-bottom:8px;font:400 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+legend em{font-style:normal;color:var(--mute);letter-spacing:.06em;text-transform:none;font-family:var(--body);font-size:13px}
+legend em.warn{color:var(--amber)}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.plans label,.grid2 label,.qty label{position:relative;display:block;cursor:pointer}
+.plans input,.grid2 input,.qty input{position:absolute;opacity:0;pointer-events:none}
+.plans .pl{display:block;min-height:100%;padding:12px;border:1px solid var(--line2);transition:border-color .15s,background .15s}
+.plans .pl .n{display:block;font:400 11px/1.2 var(--disp);letter-spacing:.06em;text-transform:uppercase}
+.plans .pl .p{display:block;margin-top:8px;font:600 20px/1 var(--body)}
+.plans .pl .p small{font-size:12px;font-weight:500;color:var(--tx2)}
+.plans .pl .p s{display:block;margin-top:4px;font-size:12px;font-weight:400;color:var(--mute)}
+.plans .pl .c{display:inline-block;margin-top:8px;font:400 10px/1 var(--mono);letter-spacing:.08em;color:#000;background:var(--amber);padding:4px 5px}
+.plans .pl .t{display:block;margin-top:8px;font-size:12px;color:var(--mute)}
+.plans input:checked+.pl{border-color:#fff;background:#111;box-shadow:inset 0 0 0 1px #fff}
+.plans input:focus-visible+.pl,.grid2 input:focus-visible+span,.qty input:focus-visible+span{outline:2px solid var(--amber);outline-offset:2px}
+.perks{margin:12px 0 0;padding:0;list-style:none;font-size:14px;color:var(--tx2)}
+.perks li{padding:3px 0 3px 20px;position:relative}.perks li:before{content:'✓';position:absolute;left:0;color:var(--amber)}
+.grid2{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}.grid2 label{grid-column:span 2}.grid2 label:nth-child(4),.grid2 label:nth-child(5){grid-column:span 3}
+.grid2 span,.qty span{display:flex;flex-direction:column;justify-content:center;min-height:48px;padding:6px 10px;border:1px solid var(--line2);font:600 15px/1.2 var(--body);transition:border-color .15s,background .15s}
+.grid2 small,.qty small{font-size:12px;font-weight:400;color:var(--mute);margin-top:2px}
+.grid2 input:checked+span,.qty input:checked+span{background:#fff;color:#000;border-color:#fff}
+.grid2 input:checked+span small,.qty input:checked+span small{color:#333}
+.grid2 span{font-size:14px}.grid2 label,.grid2 label span{height:100%}.grid2 span{min-height:52px}
+.qty{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.shake{animation:shake .4s}@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.grid2.need span{border-color:var(--amber)}
+.total{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-top:1px solid var(--line2);margin-top:4px}
+.total span{font:400 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.total b{font:600 22px/1 var(--body)}.total b small{font-size:13px;font-weight:500;color:var(--tx2)}
+.fine{display:grid;gap:4px;margin-top:12px;font-size:13px;color:var(--tx2)}
+.fine span:before{content:'· ';color:var(--amber)}
+
+/* FAQ */
+.faq{max-width:440px;margin:24px auto 0;text-align:left}
+.faq details{border-top:1px solid var(--line)}.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:14px;align-items:center;padding:18px 0;font:600 16px/1.35 var(--body)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:'+';font:400 22px/1 var(--mono);color:var(--amber);flex:0 0 auto}
+.faq details[open] summary:after{content:'–'}
+.faq .ans{padding:0 0 18px;font-size:15px;color:var(--tx2)}.faq .ans p{margin:0 0 8px}
+
+/* cierre */
+.final{padding:64px 0 30px;text-align:center}
+.final .h{font-size:clamp(30px,8.6vw,48px)}
+.final .btn{margin:26px auto 0;max-width:440px}
+.note{margin:40px auto 0;max-width:34ch;color:var(--tx2)}.note p{margin:0 0 10px}.note a{display:inline-flex;align-items:center;min-height:44px;margin-top:6px;font:400 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#fff;text-decoration:none;border:1px solid var(--line2);padding:12px 14px}
+.sign{margin:26px auto 0;font:400 16px/1.3 var(--disp);letter-spacing:.06em;text-transform:uppercase}
+.sign span{display:block;color:var(--amber)}
+.src{padding:30px 0 10px}
+.src details{max-width:440px;margin:0 auto}
+.src summary{cursor:pointer;font:400 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute);text-align:center;padding:10px}
+.src ol{margin:10px 0 0;padding-left:18px;font-size:12px;line-height:1.5;color:var(--mute)}
+footer{padding:26px 0 40px;text-align:center;font:400 11px/1.8 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+
+/* barra fija */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:12px;padding:10px var(--pad) calc(10px + env(safe-area-inset-bottom));background:rgba(0,0,0,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--line2);transform:translateY(110%);transition:transform .25s}
+.sticky.on{transform:none}
+.sticky div{flex:1;min-width:0}
+.sticky b{display:block;font:400 12px var(--disp);letter-spacing:.08em;text-transform:uppercase}
+.sticky span{display:block;font-size:13px;color:var(--tx2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky .btn{width:auto;min-height:48px;padding:12px 18px;font-size:12px;flex:0 0 auto}
+
+/* aparición */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.js .rv.in{opacity:1;transform:none}
+/* ---- aire entre bloques (medido en estemes / estemes2) ---- */
+.ch{padding-top:clamp(80px,11vh,136px);padding-bottom:clamp(52px,7vh,84px)}
+.ch .h{margin-top:24px}
+.ch .sub{margin-top:16px}
+.txt{margin-top:28px;line-height:1.68}
+.txt+.txt{margin-top:17px}
+.ch .stage{margin-top:40px}
+.punch{margin-top:40px}
+.card{margin-top:40px}
+.ctrl{margin-top:28px}
+.count{margin-top:4px}
+.vs{margin-top:20px}
+.vs-lead{margin-top:48px}
+.pq{margin-top:40px}
+.rev{margin-top:36px}
+.faq{margin-top:36px}
+.ch form.buy,.ch .prod{margin-top:28px}
+.ch .bridge{padding-top:clamp(56px,8vh,84px)}
+.final{padding-top:clamp(96px,13vh,150px)}
+.hero .bridge{padding-top:clamp(48px,7vh,72px)}
+.final .btn{margin-top:36px}
+.note{margin-top:56px}
+/* llamado del hero: la idea central, separada del encabezado */
+.callout{position:relative;margin:72px auto 0;max-width:400px;padding:26px 22px 24px;border:1px solid var(--line2);background:linear-gradient(180deg,rgba(227,154,76,.07),rgba(227,154,76,0) 70%),#070707}
+.callout:before{content:"";position:absolute;left:50%;top:-29px;width:1px;height:28px;background:linear-gradient(180deg,rgba(227,154,76,0),var(--amber))}
+.callout:after{content:"";position:absolute;left:50%;top:-5px;width:9px;height:9px;margin-left:-4px;border-right:1px solid var(--amber);border-bottom:1px solid var(--amber);transform:rotate(45deg);background:#070707}
+.callout .cn{position:absolute;width:14px;height:14px;pointer-events:none}
+.callout .cn.a{top:-1px;left:-1px;border-top:2px solid var(--amber);border-left:2px solid var(--amber)}
+.callout .cn.b{bottom:-1px;right:-1px;border-bottom:2px solid var(--amber);border-right:2px solid var(--amber)}
+.callout p{margin:0;font:500 19px/1.5 var(--body);color:#fff}
+.txt.wide{max-width:40ch;margin-top:40px}
+.txt b{color:#fff;font-weight:600}
+.sub2{margin-top:clamp(80px,11vh,120px)}
+.sub2 .tick{display:block;width:1px;height:44px;margin:0 auto 24px;background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.4))}
+.sub2 .h3{margin-top:0;font-size:clamp(24px,6.4vw,36px)}
+.txt.gap{margin-top:44px}
+.count small{font:400 11px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.shots{gap:14px}.shot{margin:0;border:1px solid rgba(255,255,255,.12);border-radius:16px;overflow:hidden;background:#0c0e12}.shot img{display:block;width:100%;height:auto}.shots-note{margin-top:18px}
+.final .h{font-size:clamp(23px,6.3vw,40px);line-height:1.12}
+.txt.wide{max-width:none;font-size:15.5px;line-height:1.6;letter-spacing:-.005em}
+@media (min-width:760px){
+  :root{--pad:32px}
+  .stage{margin-left:0;margin-right:0}
+  .sticky{display:none}
+  body.has-sticky{padding-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.stage .gr{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <img src="assets/logo-w.png" alt="Shock Coffee" width="140" height="15">
+  <div class="read" aria-hidden="true">Leído <i id="readBar"></i><b id="readPct">0%</b></div>
+</div></header>
+
+<main>
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1"><div class="wrap">
+  <span class="eye">Shock Coffee // 300 mg</span>
+  <h1 class="h" id="h1">El buen café<span>no es negro.</span></h1>
+  <p class="sub">Si tu café parece petróleo, tenemos que hablar.</p>
+  <div class="stage wh" id="heroStage"><canvas id="cvHero" aria-label="El paquete de Shock Coffee. Un escáner lo recorre y deja ver los granos de café, color ámbar, adentro."></canvas><span class="vig"></span><span class="gr"></span><span class="cn a"></span><span class="cn b"></span>
+  </div>
+  <a class="btn js-go" href="#comprar" data-pos="hero" id="heroCta">Probar Shock <span aria-hidden="true">→</span></a>
+  <p class="price">Desde <b>$15.900/mes</b> · Cancelás cuando quieras</p>
+  <div class="proof"><span>Cafeína medida por la UBA</span><span>Envío en el día en CABA y AMBA</span></div>
+  <div class="callout"><span class="cn a"></span><span class="cn b"></span><p><b>Shock tiene el triple de cafeína</b> que un café común. Y no es más negro ni más amargo. <span class="am">Es más suave.</span></p></div>
+  <a class="bridge" href="#mito"><span>Pero si tiene más cafeína, ¿no es más negro?</span><i></i></a>
+</div></section>
+
+<!-- 01 · EL COLOR -->
+<section id="mito" aria-labelledby="m-h"><div class="wrap ch">
+  <span class="eye">01 // El color</span>
+  <h2 class="h" id="m-h">Más negro<span>no es más fuerte.</span></h2>
+  <p class="txt wide">El color dice cuánto se tostó, no cuánta cafeína tiene. <b>Cuanto más tostado, más negro y más amargo.</b> La cafeína no se mueve.</p>
+  <div class="stage" id="cupStage"><canvas id="cvCup" class="seq" data-seq="assets/seq/cup" data-n="21" aria-label="Una taza vista por rayos X: a medida que sube el tostado el café pasa de ámbar a negro, y los puntos blancos de cafeína no cambian."></canvas><span class="vig"></span><span class="gr"></span><span class="cn a"></span><span class="cn b"></span>
+  </div>
+  <div class="ctrl">
+    <input type="range" id="roastR" min="0" max="100" value="0" step="1" aria-label="Tostado">
+    <div class="ticks" aria-hidden="true"></div>
+    <div class="stops"><span>Claro</span><span>Medio</span><span>Oscuro</span><span>Torrado</span></div>
+  </div>
+  <p class="punch">Un café negro es intenso porque está quemado o porque tiene azúcar. <span class="am">No porque sea alto en cafeína.</span></p>
+  <a class="bridge" href="#torrado"><span>¿Azúcar? ¿En el café?</span></a>
+</div></section>
+
+<!-- 02 · EL TORRADO -->
+<section id="torrado" aria-labelledby="t-h"><div class="wrap ch">
+  <span class="eye">02 // El torrado</span>
+  <h2 class="h" id="t-h">¿Cómo que le ponen<span>azúcar al café?</span></h2>
+  <p class="txt">Mientras tuestan el grano, le tiran azúcar. El azúcar se quema y lo cubre con una capa negra y brillante. Como un barniz. <b>Por eso es tan negro y tan amargo.</b></p>
+  <div class="stage" id="beanStage"><canvas id="cvBean" class="seq" data-seq="assets/seq/bean" data-n="48" aria-label="Un grano de café visto por rayos X. Le cae azúcar y una capa negra y brillante lo va cubriendo."></canvas><span class="vig"></span><span class="gr"></span><span class="cn a"></span><span class="cn b"></span>
+  </div>
+
+
+  <div class="sub2" id="porque"><span class="tick" aria-hidden="true"></span><h3 class="h h3" id="p-h">Pagás azúcar<span>a precio de café.</span></h3>
+  <p class="sub">Al tostarse, el grano pierde peso. El azúcar lo recupera.</p></div>
+  <div class="stage" id="balStage"><canvas id="cvBal" class="seq" data-seq="assets/seq/bal" data-n="36" aria-label="Una balanza vista por rayos X: de un lado café, del otro azúcar que cae y hace bajar el platillo."></canvas><span class="vig"></span><span class="gr"></span><span class="cn a"></span><span class="cn b"></span>
+  </div>
+  <p class="txt gap"><b>Y de paso, el azúcar tapa los defectos de los granos más baratos. <span class="am">Negocio redondo.</span> Para ellos.</b></p>
+  <a class="bridge" href="#shock"><span>¿Y Shock qué tiene de distinto?</span></a>
+</div></section>
+
+<!-- 03 · TU SHOCK -->
+<section id="shock" aria-labelledby="s-h"><div class="wrap ch">
+  <span class="eye">03 // Tu Shock</span>
+  <h2 class="h" id="s-h">Shock tiene más cafeína<span>y es más suave.</span></h2>
+  <p class="txt">La cafeína no hace más amargo al café. <b>Lo amargo sale del tostado.</b> Por eso Shock puede tener el triple de cafeína que un café común y ser más suave.</p>
+  <div class="stage w1611" id="eqStage"><canvas id="cvEq" class="seq" data-seq="assets/seq/eq" data-n="92" aria-label="Tres tazas de café común se desarman en partículas y llenan una taza de Shock."></canvas><span class="vig"></span><span class="gr"></span><span class="cn a"></span><span class="cn b"></span>
+  </div>
+  <div class="count"><small>Cafeína por taza · medido por la UBA</small><strong><span id="cnt">000</span> mg</strong></div>
+  <p class="txt gap">¿Y por qué tanta cafeína? Porque <b>te da foco y energía</b>, para la cabeza y para el cuerpo. Y se puede hacer un café rico con mucha cafeína. <b>No tenés que elegir entre el gusto y el efecto.</b></p>
+  <div class="pq rv"><q>Pensé, con toda la publicidad que vi, que iba a estar enchufado a 220. Pero no.</q><span class="who">Suscriptor · WhatsApp · julio 2026</span></div>
+  <a class="bridge" href="#comprar"><span>¿Lo probamos?</span></a>
+</div></section>
+
+<!-- 05 · COMPRA -->
+<section id="comprar" class="buy-sec" aria-labelledby="b-h"><div class="wrap ch">
+  <span class="eye">04 // Probalo</span>
+  <h2 class="h" id="b-h">Probalo<span>un mes.</span></h2>
+  <p class="sub">Elegí y listo. Del resto me ocupo yo.</p>
+  <div class="prod"><img id="buyImg" src="assets/bag-thumb.webp" alt="Shock Coffee 250 g" width="72" height="72" loading="lazy"><div><b>Shock Coffee 250 g</b><span>Granos de especialidad · 300 mg de cafeína por taza · Cero azúcar</span></div></div>
+
+  <form class="buy" id="buy" method="post" action="https://theshockcoffee.com/comprar/" novalidate>
+    <input type="hidden" name="quantity" value="1">
+    <input type="hidden" name="add_to_cart" id="pid" value="168965281">
+    <fieldset><legend>1 · Cómo lo querés</legend>
+      <div class="plans">
+        <label><input type="radio" name="mode" value="sub" checked><span class="pl"><span class="n">Suscripción</span><span class="p" id="subP">$15.900<small>/mes</small></span><span class="c" id="subChip">20% OFF</span></span></label>
+        <label><input type="radio" name="mode" value="once"><span class="pl"><span class="n">Compra única</span><span class="p" id="onceP">$19.900<s>$22.900</s></span></span></label>
+      </div>
+    </fieldset>
+    <fieldset><legend>2 · Tu molienda <em id="mollHint">elegí una</em></legend>
+      <div class="grid2" id="grind">
+        <label><input type="radio" name="variation[0]" value="Filtro" data-sub="Filtro"><span>Filtro<small>sin cafetera</small></span></label>
+        <label><input type="radio" name="variation[0]" value="Cafetera italiana / Volturno" data-sub="Italiana / Volturno"><span>Italiana<small>Volturno</small></span></label>
+        <label><input type="radio" name="variation[0]" value="Prensa Francesa" data-sub="Prensa francesa"><span>Prensa<small>francesa</small></span></label>
+        <label><input type="radio" name="variation[0]" value="Espresso" data-sub="Espresso"><span>Espresso<small>máquina</small></span></label>
+        <label><input type="radio" name="variation[0]" value="En grano" data-sub="En grano"><span>En grano<small>lo molés vos</small></span></label>
+      </div>
+    </fieldset>
+    <fieldset><legend>3 · Cuántos</legend>
+      <div class="qty">
+        <label><input type="radio" name="packs" value="1" checked><span>1 paquete<small>250 g</small></span></label>
+        <label><input type="radio" name="packs" value="2"><span>2 paquetes<small>500 g</small></span></label>
+      </div>
+    </fieldset>
+    <div class="total"><span id="totL">Total</span><b id="totV">$15.900<small>/mes + envío</small></b></div>
+    <button type="submit" class="btn" id="cta"><span id="ctaTxt">Probar Shock</span><span aria-hidden="true">→</span></button>
+    <ul class="perks" id="perks"></ul>
+    <div class="fine" id="fine"></div>
+  </form>
+  <a class="bridge" href="#resenas"><span>¿Qué dicen los que ya se suscribieron?</span></a>
+</div></section>
+
+<!-- 06 · RESEÑAS -->
+<section id="resenas" aria-labelledby="r-h"><div class="wrap ch">
+  <span class="eye">05 // Reseñas</span>
+  <h2 class="h" id="r-h">Mirá lo que dicen<span>los que se suscribieron.</span></h2>
+    <div class="rev shots">
+    <figure class="shot rv"><img src="assets/rev/r1.webp" width="900" height="313" loading="lazy" decoding="async" alt="Comentario de Instagram: «Lo probaste al menos? Está tremendo el café, lejos lo mejorcito que probé, ni siquiera le pongo azúcar, lo tomo así puro como viene y es una genialidad.»"></figure>
+    <figure class="shot rv"><img src="assets/rev/r2.webp" width="900" height="389" loading="lazy" decoding="async" alt="Mensaje directo de Instagram: «Cambiaste algo en el proceso de tostado? La última tanda una locura el olor y sabor. Salió un olor a café con cacao tremendo, está mucho más rico que las otras veces que compré.»"></figure>
+    <figure class="shot rv"><img src="assets/rev/r3.webp" width="900" height="506" loading="lazy" decoding="async" alt="Mensaje directo de Instagram: «Fui al Exigí Buen Café hoy en la Rural. El único stand que se merecía el lugar era uno que les dedicaran a ustedes. Todo un desastre al lado del producto que hacen, los felicito mucho, son los mejores.»"></figure>
+    <figure class="shot rv"><img src="assets/rev/r4.webp" width="900" height="254" loading="lazy" decoding="async" alt="Mensaje de WhatsApp: «Buen día gente!! El mejor café del mundo lejos.»"></figure>
+  </div>
+  <p class="price shots-note">Tapé nombres y fotos. Lo demás, tal cual me llegó.</p>
+  <a class="bridge" href="#prueba"><span>¿Querés comprobarlo con tu café?</span></a>
+</div></section>
+
+<!-- 07 · LA PRUEBA -->
+<section id="prueba" aria-labelledby="v-h"><div class="wrap ch">
+  <span class="eye">06 // La prueba</span>
+  <h2 class="h" id="v-h">Ponelo<span>contra la luz.</span></h2>
+  <p class="sub">Un vaso de vidrio y diez segundos.</p>
+  <p class="txt">Serví tu café en un vaso, sin leche, y miralo a contraluz. Shock deja pasar la luz. El torrado queda negro, como un pozo. Hacelo con el tuyo.</p>
+  <div class="stage" id="glasses"><canvas id="cvGlass" class="seq" data-seq="assets/seq/glass" data-n="24" aria-label="Dos vasos frente a un panel de luz: el torrado queda negro y Shock se ve rojizo y traslúcido."></canvas><span class="vig"></span><span class="gr"></span><span class="cn a"></span><span class="cn b"></span>
+        <div class="hud tr"><b id="hudL">Luz: off</b></div>
+    <div class="hud bl">A · Torrado<br><b id="glT">Opaco</b></div>
+    <div class="hud br">B · Shock<br><b class="dim" id="glS">Esperando luz</b></div>
+  </div>
+  <a class="bridge" href="#faq"><span>¿Te quedó alguna duda?</span></a>
+</div></section>
+
+<!-- FAQ -->
+<section id="faq" aria-labelledby="f-h"><div class="wrap ch">
+  <span class="eye">07 // Preguntas</span>
+  <h2 class="h" id="f-h">Las dudas<span>de siempre.</span></h2>
+  <div class="faq">
+    <details data-q="q10"><summary>Si tiene más cafeína, ¿no es más amargo?</summary><div class="ans"><p>No. Lo amargo sale del tostado, no de la cafeína. Por eso Shock es suave.</p></div></details>
+    <details data-q="q8"><summary>Si es clarito, ¿no es aguado?</summary><div class="ans"><p>No. Aguado es poco café. Clarito es poco quemado. Y tiene el triple de cafeína.</p></div></details>
+    <details data-q="q9"><summary>¿Cuánto tarda el envío?</summary><div class="ans"><p>Despachamos en menos de 24 horas hábiles. En CABA y en buena parte de AMBA llega en el día. La zona sur y el resto del país van por Andreani, a domicilio o a sucursal. También podés retirarlo en Belgrano o en Villa Crespo.</p></div></details>
+    <details data-q="q3"><summary>¿Qué pasa después de comprar?</summary><div class="ans"><p><b>Suscripción:</b> completás tus datos, elegís envío o retiro y pagás por Mercado Pago. Después te llega todos los meses.</p><p><b>Compra única:</b> vas al carrito de la tienda, elegís el envío y pagás.</p></div></details>
+    <details data-q="q6"><summary>¿La suscripción tiene permanencia?</summary><div class="ans"><p>No. Pausás, salteás un envío o cancelás cuando quieras desde Mercado Pago.</p></div></details>
+    <details data-q="q5"><summary>¿Se puede tomar con leche?</summary><div class="ans"><p>Sí. La cafeína es la misma.</p></div></details>
+  </div>
+</div></section>
+
+<!-- CIERRE -->
+<section class="final" id="final" aria-labelledby="c-h"><div class="wrap">
+  <span class="eye">Tenés cosas que hacer</span>
+  <h2 class="h" id="c-h">Animate a sentir<span>el poder de un café bien hecho.</span></h2>
+  <a class="btn js-go" href="#comprar" data-pos="final">Probar Shock <span aria-hidden="true">→</span></a>
+  <p class="price">Desde <b>$15.900/mes</b> · Cancelás cuando quieras</p>
+  <div class="note"><p>Si llegaste hasta acá, ya sabés que fuerte no es lo mismo que negro.</p><p>Probá Shock y después contame por Instagram qué te pareció.</p><a href="https://instagram.com/theshockcoffee" target="_blank" rel="noopener">↗ @theshockcoffee</a></div>
+  <div class="sign">Un abrazo,<span>Lucas</span></div>
+</div></section>
+
+<div class="src"><div class="wrap"><details><summary>Fuentes</summary><ol>
+<li>Código Alimentario Argentino, Capítulo XV, art. 1166 (café tostado o torrado con azúcares).</li>
+<li>Merma de peso en el tostado y agregado de azúcar: iProfesional, «Cómo podés descubrir el café trucho en supermercados», 2026; Billiken, «¿Cuál es la diferencia entre café tostado y café torrado?».</li>
+<li>Torrado para tapar defectos de granos de menor calidad: MDZ, 19/07/2021; Sitio Andino, 04/08/2026.</li>
+<li>Frank O. et al. Fenilindanos, el amargor del tostado oscuro. <a href="https://doi.org/10.1021/jf0632280" target="_blank" rel="noopener">J Agric Food Chem, 2007</a></li>
+<li>Comparación del contenido de cafeína por espectroscopía UV-Vis. UBA, FCEN, Departamento de Física, 23/12/2024.</li>
+</ol></details></div></div>
+</main>
+
+<footer><div class="wrap">Shock Coffee // 2026<br>Tenés cosas que hacer.<br>Hecho en Argentina, para salir adelante.</div></footer>
+
+<div class="sticky" id="sticky" aria-hidden="true">
+  <div><b>Shock Coffee 250 g</b><span id="stTxt">Suscripción · $15.900/mes</span></div>
+  <a class="btn js-go" href="#comprar" data-pos="sticky" tabindex="-1">Probar Shock</a>
+</div>
+
+<script>
+(()=>{
+  const $=id=>document.getElementById(id);
+  const RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const track=(n,p)=>{try{fbq('trackCustom',n,Object.assign({lp:'torrado'},p||{}))}catch(e){}};
+  const once=(el,fn,opt)=>{if(!('IntersectionObserver' in window)){fn();return}const io=new IntersectionObserver(es=>{es.forEach(x=>{if(x.isIntersecting){fn(x.target);io.unobserve(x.target)}})},opt||{threshold:.18});io.observe(el)};
+  const ss=t=>{t=Math.max(0,Math.min(1,t));return t*t*(3-2*t)};
+
+  /* ---------- compra (misma lógica probada contra la tienda real) ---------- */
+  const form=$('buy');
+  const QS=location.search||'';
+  const P={
+    once:{1:{id:'168965281',p:'$19.900',s:'$22.900',img:'assets/clasico.webp'},2:{id:'221544509',p:'$36.500',s:'$45.800',img:'assets/dos.webp'}},
+    sub:{1:'$15.900',2:'$29.500'},chip:{1:'20% OFF',2:'19% OFF'},cupS:{1:'$636',2:'$590'},cupO:{1:'$796',2:'$730'}
+  };
+  const PERKS={
+    sub:['Te llega todos los meses, sin que te acuerdes','Una muestra de algo nuevo en cada envío','Pausás o cancelás cuando quieras'],
+    once:['Un solo pago, sin suscripción','Vas directo al carrito de la tienda']
+  };
+  const ONB='https://suscripcion.theshockcoffee.com/onboarding-suscripcion';
+  const val=n=>{const r=form.querySelector(`input[name="${n}"]:checked`);return r?r.value:null};
+  function render(){
+    const mode=val('mode'),k=val('packs'),o=P.once[k];
+    $('pid').value=o.id;
+    $('onceP').innerHTML=`${o.p}<s>${o.s}</s>`;
+    $('subP').innerHTML=`${P.sub[k]}<small>/mes</small>`;$('subChip').textContent=P.chip[k];
+    $('perks').innerHTML=PERKS[mode].map(x=>`<li>${x}</li>`).join('');
+    if(mode==='sub'){
+      $('totL').textContent='Total';$('totV').innerHTML=`${P.sub[k]}<small>/mes + envío</small>`;
+      $('ctaTxt').textContent='Probar Shock';
+      $('fine').innerHTML='<span>Pagás con Mercado Pago, débito automático</span><span>Despachamos en menos de 24 h hábiles · el costo de envío lo ves en el paso siguiente</span>';
+      $('stTxt').textContent=`Suscripción · ${P.sub[k]}/mes`;
+    }else{
+      $('totL').textContent='Total';$('totV').innerHTML=`${o.p}<small> + envío</small>`;
+      $('ctaTxt').textContent=`Probar Shock · ${o.p}`;
+      $('fine').innerHTML='<span>Despachamos en menos de 24 h hábiles · el costo de envío lo ves en el carrito</span>';
+      $('stTxt').textContent=`Compra única · ${o.p}`;
+    }
+  }
+  const grind=$('grind');
+  form.addEventListener('change',e=>{if(e.target.name==='variation[0]'){const h=$('mollHint');h.textContent='';h.className='';grind.classList.remove('need')}render()});
+  function needGrind(){const h=$('mollHint');h.textContent='elegí una para seguir';h.className='warn';grind.classList.add('need');grind.classList.remove('shake');void grind.offsetWidth;grind.classList.add('shake');grind.scrollIntoView({block:'center',behavior:'smooth'})}
+  form.addEventListener('submit',e=>{
+    const g=form.querySelector('input[name="variation[0]"]:checked');
+    if(!g){e.preventDefault();needGrind();return}
+    const mode=val('mode'),k=val('packs');
+    track('CTAClick',{mode,packs:k,grind:g.value});try{gtag('event','cta_click',{lp:'torrado',mode,packs:k,grind:g.value})}catch(err){}
+    if(mode==='sub'){
+      e.preventDefault();
+      const m=g.dataset.sub,c=Array.from({length:+k},()=>`clasico:Clasico:${m}`).join(',');
+      const extra=QS?'&'+QS.slice(1):'';
+      location.href=`${ONB}?ref=lp-torrado&cafes=${encodeURIComponent(c)}&linea=clasico&sabor=Clasico&molienda=${encodeURIComponent(m)}&packs=${k}${extra}`;
+      return;
+    }
+    $('cta').disabled=true;$('ctaTxt').textContent='Sumando a tu carrito…';
+    setTimeout(()=>{$('cta').disabled=false;render()},6000);
+  });
+  window.addEventListener('pageshow',()=>{$('cta').disabled=false;render()});
+  document.querySelectorAll('.js-go').forEach(a=>a.addEventListener('click',()=>track('GoBuy',{pos:a.dataset.pos})));
+  document.querySelectorAll('.faq details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)track('FAQ_Open',{q:d.dataset.q})}));
+  render();
+
+  /* ---------- aparición ---------- */
+  document.querySelectorAll('.rv').forEach(el=>once(el,()=>el.classList.add('in'),{threshold:.12,rootMargin:'0px 0px -6% 0px'}));
+
+  /* ---------- secuencias 3D pre-renderizadas (Blender) ---------- */
+  const SEQ={};
+  function seqInit(cv){
+    const base=cv.dataset.seq,n=+cv.dataset.n,ctx=cv.getContext('2d'),imgs=new Array(n);let loaded=0,cur=-1,want=+(cv.dataset.start||0);
+    const o={n,set(t){want=Math.round(Math.max(0,Math.min(1,t))*(n-1));draw()},frame(i){want=((i%n)+n)%n;draw()}};
+    function size(){const r=cv.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);cv.width=Math.round(r.width*d);cv.height=Math.round(r.height*d);cur=-1;draw()}
+    function draw(){let i=want;while(i>=0&&!(imgs[i]&&imgs[i].complete&&imgs[i].naturalWidth))i--;if(i<0||i===cur)return;cur=i;const im=imgs[i],cw=cv.width,ch=cv.height,s=Math.max(cw/im.naturalWidth,ch/im.naturalHeight),w=im.naturalWidth*s,h=im.naturalHeight*s;ctx.fillStyle='#000';ctx.fillRect(0,0,cw,ch);ctx.drawImage(im,(cw-w)/2,(ch-h)/2,w,h);cv.classList.add('ready')}
+    function load(){const st=want;for(let k=0;k<n;k++){const i=(k+st)%n;const im=new Image();im.decoding='async';im.onload=()=>{loaded++;if(i===want||loaded===n)draw()};im.src=`${base}/${String(i).padStart(3,'0')}.webp`;imgs[i]=im}}
+    once(cv,load,{rootMargin:'800px 0px'});
+    addEventListener('resize',size);size();
+    return o;
+  }
+  document.querySelectorAll('canvas.seq').forEach(cv=>{SEQ[cv.id]=seqInit(cv)});
+  function playSeq(id,from,to,ms,done,onp,lin){const s=SEQ[id];if(!s)return;const t0=performance.now();const st=ts=>{const e=Math.min(1,(ts-t0)/ms);const k=lin?e:e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2;const v=from+(to-from)*k;s.set(v);if(onp)onp(v);if(e<1)requestAnimationFrame(st);else if(done)done()};requestAnimationFrame(st)}
+  const vis={};
+  if('IntersectionObserver' in window){const vo=new IntersectionObserver(es=>es.forEach(e=>{vis[e.target.id]=e.intersectionRatio}),{threshold:[0,.25,.5,.75,1]});document.querySelectorAll('.stage').forEach(x=>vo.observe(x))}
+
+  /* hero: escáner en vivo. Dos imágenes (paquete y rayos X) cruzadas por una línea de luz, a la frecuencia de la pantalla */
+  (function(){
+    const cv=$('cvHero'),ctx=cv.getContext('2d'),B=/*HBOX*/{"x0": 0.285, "x1": 0.7214, "y0": 0.0929, "y1": 0.8884}/*HBOX*/;
+    const P=new Image(),X=new Image();P.decoding=X.decoding='async';
+    let beam=null,started=null,lastT=0;const T=6000;
+    const ss=t=>{t=Math.max(0,Math.min(1,t));return t*t*(3-2*t)};
+    function size(){const r=cv.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);cv.width=Math.round(r.width*d);cv.height=Math.round(r.height*d);beam=null;draw(lastT)}
+    function mkBeam(bw,bh,fh){const c=document.createElement('canvas');c.width=Math.max(2,Math.round(bw));c.height=Math.max(2,Math.round(bh));const g=c.getContext('2d'),id=g.createImageData(c.width,c.height),d=id.data,H=c.height,W=c.width;
+      for(let y=0;y<H;y++){const dd=Math.abs(y-H/2)/fh;const v=Math.exp(-Math.pow(dd/.0026,2))*.95+Math.exp(-Math.pow(dd/.018,2))*.24+Math.exp(-Math.pow(dd/.07,2))*.08+(y%3===0?Math.exp(-Math.pow(dd/.05,2))*.10:0);
+        for(let x=0;x<W;x++){const u=x/W,hm=ss(Math.min(u,1-u)/.1),a=Math.min(1,v*hm),i=(y*W+x)*4;d[i]=232;d[i+1]=240;d[i+2]=255;d[i+3]=a*255}}
+      g.putImageData(id,0,0);return c}
+    function draw(t){
+      if(!P.naturalWidth||!cv.width)return;lastT=t;
+      const cw=cv.width,ch=cv.height,iw=P.naturalWidth,ih=P.naturalHeight,s=Math.max(cw/iw,ch/ih);
+      ctx.setTransform(1,0,0,1,0,0);ctx.globalCompositeOperation='source-over';ctx.fillStyle='#000';ctx.fillRect(0,0,cw,ch);
+      const k=1+.014*Math.sin(t/4200);ctx.translate(cw/2,ch/2);ctx.scale(k,k);ctx.translate(-cw/2,-ch/2);
+      const dw=iw*s,dh=ih*s,dx=(cw-dw)/2,dy=(ch-dh)/2;
+      ctx.drawImage(P,dx,dy,dw,dh);
+      if(!X.naturalWidth)return;
+      const ph=(t%T)/T,top=B.y0-.05,bot=B.y1+.05;let mode='p',pos=0;
+      if(ph<.10)mode='p';else if(ph<.40){mode='tx';pos=bot-ss((ph-.10)/.30)*(bot-top)}else if(ph<.62)mode='x';else if(ph<.92){mode='tp';pos=bot-ss((ph-.62)/.30)*(bot-top)}else mode='p';
+      if(mode==='p')return;
+      const ly=dy+pos*dh;ctx.save();ctx.beginPath();
+      if(mode==='x')ctx.rect(0,0,cw,ch);else if(mode==='tx')ctx.rect(0,ly,cw,ch);else ctx.rect(0,0,cw,ly);
+      ctx.clip();ctx.drawImage(X,dx,dy,dw,dh);ctx.restore();
+      if(mode==='x')return;
+      const bw=(B.x1-B.x0)*1.4*dw;if(!beam||beam.width!==Math.round(bw))beam=mkBeam(bw,.2*dh,dh);
+      ctx.globalCompositeOperation='lighter';ctx.drawImage(beam,dx+(B.x0-(B.x1-B.x0)*.2)*dw,ly-beam.height/2);ctx.globalCompositeOperation='source-over';
+    }
+    P.onload=()=>{cv.classList.add('ready');draw(lastT)};
+    P.src='assets/hero/p.webp';
+    const loadX=()=>{if(!X.src)X.src='assets/hero/x.webp'};
+    if(document.readyState==='complete')setTimeout(loadX,200);else addEventListener('load',()=>setTimeout(loadX,200));
+    addEventListener('resize',size);size();
+    if(RM)return;
+    const tick=ts=>{if((vis.heroStage===undefined||vis.heroStage>0)&&X.naturalWidth){if(started===null)started=ts;const t=ts-started-1200;draw(t<0?0:t)}requestAnimationFrame(tick)};requestAnimationFrame(tick);
+  })();
+
+  /* 01: el grano se cubre con el scroll */
+  const bean=$('beanStage');
+  function beanTick(){
+    const r=bean.getBoundingClientRect(),vh=innerHeight;
+    let p=(vh*0.8-r.top)/(r.height*0.9);p=Math.max(0,Math.min(1,p));if(RM)p=1;
+    if(SEQ.cvBean)SEQ.cvBean.set(p);
+  }
+
+  /* 02: la balanza se inclina sola al llegar */
+  const balSet=()=>{};
+  once($('balStage'),()=>setTimeout(()=>playSeq('cvBal',0,1,RM?1:3000,null,balSet,true),300),{threshold:.6});
+
+  /* 03: la taza se tuesta sola; si tocás, manda el dedo */
+  const R=$('roastR');const NAMES=['Claro','Medio','Oscuro','Torrado'],AM=['bajo','medio','alto','muy alto'];let usedRoast=false;
+  function roast(){const v=+R.value/100,k=Math.min(3,Math.round(v*3));if(SEQ.cvCup)SEQ.cvCup.set(v)}
+  R.addEventListener('input',()=>{usedRoast=true;roast();track('Interact',{w:'roast'})},{passive:true});
+  R.addEventListener('pointerdown',()=>{usedRoast=true});
+  roast();
+  (function(){if(RM)return;let t0=null;const loop=ts=>{if(usedRoast)return;if((vis.cupStage||0)>=.5){if(t0===null)t0=ts;const e=((ts-t0)/7000)%1;const v=e<.45?ss(e/.45):e<.55?1:e<.95?1-ss((e-.55)/.4):0;R.value=Math.round(v*100);roast()}else t0=null;requestAnimationFrame(loop)};requestAnimationFrame(loop)})();
+
+  /* 04: 3 = 1 y contador */
+  once($('eqStage'),()=>{const el=$('cnt'),pad=n=>String(n).padStart(3,'0');
+    if(RM){el.textContent='300';if(SEQ.cvEq)SEQ.cvEq.set(1);return}
+    setTimeout(()=>playSeq('cvEq',0,1,4600,null,v=>{const lv=[.04,.28,.52].reduce((a,d)=>a+ss((v-d-.1)/.1),0)/3;let c=Math.round(300*lv);const r=Math.round(c/100)*100;if(Math.abs(c-r)<=3)c=r;el.textContent=pad(c)},true),700)},{threshold:.6});
+
+  /* 07: la luz se prende sola al llegar */
+  const G=$('glasses');let lightOn=false;
+  function light(on){lightOn=on;playSeq('cvGlass',on?0:1,on?1:0,on?1600:700);setTimeout(()=>{if(lightOn!==on)return;$('glS').textContent=on?'Pasa luz · rojizo':'Esperando luz';$('glS').className=on?'a':'dim';$('hudL').textContent=on?'Luz: on':'Luz: off'},on?600:0)}
+  once(G,()=>setTimeout(()=>light(true),500),{threshold:.6});
+  G.addEventListener('click',()=>{light(!lightOn);track('Interact',{w:'luz',on:lightOn})});
+
+  /* ---------- scroll: leído y grano ---------- */
+  const rb=$('readBar'),rp=$('readPct');let tick=false;
+  function onScroll(){const h=document.documentElement,p=h.scrollTop/(h.scrollHeight-innerHeight);rb.style.setProperty('--r',p.toFixed(3));rp.textContent=Math.round(p*100)+'%';beanTick();tick=false}
+  addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});
+  addEventListener('resize',onScroll);onScroll();
+
+  /* ---------- barra fija: aparece cuando el CTA del hero se va; se esconde en la compra, el cierre y las escenas ---------- */
+  const st=$('sticky');
+  if('IntersectionObserver' in window){
+    let heroVis=true,buyVis=false,finVis=false;const stg=new Set();
+    const upd=()=>{const on=!heroVis&&!buyVis&&!finVis&&!stg.size;st.classList.toggle('on',on);document.body.classList.toggle('has-sticky',!heroVis)};
+    new IntersectionObserver(es=>{heroVis=es[0].isIntersecting||es[0].boundingClientRect.top>0;upd()},{threshold:0}).observe($('heroCta'));
+    new IntersectionObserver(es=>{buyVis=es[0].isIntersecting;upd()},{threshold:.05}).observe($('buy'));
+    new IntersectionObserver(es=>{finVis=es[0].isIntersecting;upd()},{threshold:.3}).observe($('final'));
+    const so=new IntersectionObserver(es=>{es.forEach(e=>{e.intersectionRatio>=.5?stg.add(e.target):stg.delete(e.target)});upd()},{threshold:[0,.5]});
+    document.querySelectorAll('.stage').forEach(x=>{if(x.id!=='heroStage')so.observe(x)});
+  }
+})();
+</script>
+</body>
+</html>
