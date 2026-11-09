@@ -8,8 +8,8 @@
 <title>Shock Coffee — El buen café no es negro</title>
 <meta name="description" content="Ese negro amargo que creés que es «fuerte» es azúcar quemada. Lo que te despierta es la cafeína: Shock tiene el triple y sabe suave.">
 <link rel="preload" as="font" href="assets/trivial.woff" type="font/woff" crossorigin>
-<link rel="preload" as="image" href="assets/hero/p.webp" fetchpriority="high">
-<link rel="preload" as="image" href="assets/hero/x.webp">
+<link rel="preload" as="image" href="assets/hero/p06.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero/x06.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXVTT7V8HH"></script>
@@ -536,41 +536,49 @@ footer{padding:26px 0 40px;text-align:center;font:400 11px/1.8 var(--mono);lette
   const vis={};
   if('IntersectionObserver' in window){const vo=new IntersectionObserver(es=>es.forEach(e=>{vis[e.target.id]=e.intersectionRatio}),{threshold:[0,.25,.5,.75,1]});document.querySelectorAll('.stage').forEach(x=>vo.observe(x))}
 
-  /* hero: escáner en vivo. Dos imágenes (paquete y rayos X) cruzadas por una línea de luz, a la frecuencia de la pantalla */
+  /* hero: pack que se balancea apenas (12 vistas renderizadas, fundidas entre sí) + escáner en vivo, a la frecuencia de la pantalla */
   (function(){
-    const cv=$('cvHero'),ctx=cv.getContext('2d'),B=/*HBOX*/{"x0": 0.3064, "x1": 0.7121, "y0": 0.0821, "y1": 0.8982}/*HBOX*/;
-    const P=new Image(),X=new Image();P.decoding=X.decoding='async';
-    let beam=null,started=null,lastT=0;const T=6000;
+    const cv=$('cvHero'),ctx=cv.getContext('2d'),B=/*HBOX*/{"x0": 0.3, "x1": 0.7167, "y0": 0.0802, "y1": 0.901}/*HBOX*/;
+    const N=12,MID=6,P=[],X=[];
+    const mk=(k,i)=>{const im=new Image();im.decoding='async';im.src=`assets/hero/${k}${String(i).padStart(2,'0')}.webp`;return im};
+    P[MID]=mk('p',MID);X[MID]=mk('x',MID);
+    let beam=null,started=null,lastT=0,rest=false;const T=6000,SW=7600;
     const ss=t=>{t=Math.max(0,Math.min(1,t));return t*t*(3-2*t)};
+    const ok=im=>im&&im.complete&&im.naturalWidth;
+    function loadRest(){if(rest)return;rest=true;for(let i=0;i<N;i++){if(i===MID)continue;P[i]=mk('p',i);X[i]=mk('x',i)}}
     function size(){const r=cv.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);cv.width=Math.round(r.width*d);cv.height=Math.round(r.height*d);beam=null;draw(lastT)}
     function mkBeam(bw,bh,fh){const c=document.createElement('canvas');c.width=Math.max(2,Math.round(bw));c.height=Math.max(2,Math.round(bh));const g=c.getContext('2d'),id=g.createImageData(c.width,c.height),d=id.data,H=c.height,W=c.width;
       for(let y=0;y<H;y++){const dd=Math.abs(y-H/2)/fh;const v=Math.exp(-Math.pow(dd/.0026,2))*.95+Math.exp(-Math.pow(dd/.018,2))*.24+Math.exp(-Math.pow(dd/.07,2))*.08+(y%3===0?Math.exp(-Math.pow(dd/.05,2))*.10:0);
         for(let x=0;x<W;x++){const u=x/W,hm=ss(Math.min(u,1-u)/.1),a=Math.min(1,v*hm),i=(y*W+x)*4;d[i]=232;d[i+1]=240;d[i+2]=255;d[i+3]=a*255}}
       g.putImageData(id,0,0);return c}
+    /* vista según el tiempo: vaivén suave entre -28° y -20° (las 12 vistas), fundiendo la vecina */
+    function pair(arr,t){const a=.5+.5*Math.sin(t/SW*2*Math.PI),k=a*(N-1),i0=Math.floor(k),i1=Math.min(N-1,i0+1),f=k-i0;
+      const A=ok(arr[i0])?arr[i0]:arr[MID],Bm=ok(arr[i1])?arr[i1]:A;return [A,Bm,ok(arr[i0])&&ok(arr[i1])?f:0]}
+    function blit(arr,t,dx,dy,dw,dh){const [a,b,f]=pair(arr,t);ctx.globalAlpha=1;ctx.drawImage(a,dx,dy,dw,dh);if(f>0.01&&b!==a){ctx.globalAlpha=f;ctx.drawImage(b,dx,dy,dw,dh);ctx.globalAlpha=1}}
     function draw(t){
-      if(!P.naturalWidth||!cv.width)return;lastT=t;
-      const cw=cv.width,ch=cv.height,iw=P.naturalWidth,ih=P.naturalHeight,s=Math.max(cw/iw,ch/ih);
-      ctx.setTransform(1,0,0,1,0,0);ctx.globalCompositeOperation='source-over';ctx.fillStyle='#000';ctx.fillRect(0,0,cw,ch);
-      const k=1+.014*Math.sin(t/4200);ctx.translate(cw/2,ch/2);ctx.scale(k,k);ctx.translate(-cw/2,-ch/2);
+      const base=P[MID];if(!ok(base)||!cv.width)return;lastT=t;
+      const cw=cv.width,ch=cv.height,iw=base.naturalWidth,ih=base.naturalHeight,s=Math.max(cw/iw,ch/ih);
+      ctx.setTransform(1,0,0,1,0,0);ctx.globalCompositeOperation='source-over';ctx.globalAlpha=1;ctx.fillStyle='#000';ctx.fillRect(0,0,cw,ch);
+      const k=1+.008*Math.sin(t/4200),fy=Math.sin(t/SW*2*Math.PI+1.2)*ch*.007;
+      ctx.translate(cw/2,ch/2+fy);ctx.scale(k,k);ctx.translate(-cw/2,-ch/2);
       const dw=iw*s,dh=ih*s,dx=(cw-dw)/2,dy=(ch-dh)/2;
-      ctx.drawImage(P,dx,dy,dw,dh);
-      if(!X.naturalWidth)return;
+      blit(P,t,dx,dy,dw,dh);
+      if(!ok(X[MID]))return;
       const ph=(t%T)/T,top=B.y0-.05,bot=B.y1+.05;let mode='p',pos=0;
       if(ph<.03)mode='p';else if(ph<.30){mode='tx';pos=bot-ss((ph-.03)/.27)*(bot-top)}else if(ph<.56)mode='x';else if(ph<.84){mode='tp';pos=bot-ss((ph-.56)/.28)*(bot-top)}else mode='p';
       if(mode==='p')return;
       const ly=dy+pos*dh;ctx.save();ctx.beginPath();
       if(mode==='x')ctx.rect(0,0,cw,ch);else if(mode==='tx')ctx.rect(0,ly,cw,ch);else ctx.rect(0,0,cw,ly);
-      ctx.clip();ctx.drawImage(X,dx,dy,dw,dh);ctx.restore();
+      ctx.clip();blit(X,t,dx,dy,dw,dh);ctx.restore();
       if(mode==='x')return;
       const bw=(B.x1-B.x0)*1.4*dw;if(!beam||beam.width!==Math.round(bw))beam=mkBeam(bw,.2*dh,dh);
       ctx.globalCompositeOperation='lighter';ctx.drawImage(beam,dx+(B.x0-(B.x1-B.x0)*.2)*dw,ly-beam.height/2);ctx.globalCompositeOperation='source-over';
     }
-    P.onload=()=>{cv.classList.add('ready');draw(lastT)};
-    P.src='assets/hero/p.webp';
-    X.src='assets/hero/x.webp';
+    P[MID].onload=()=>{cv.classList.add('ready');draw(lastT);setTimeout(loadRest,150)};
+    if(ok(P[MID])){cv.classList.add('ready');setTimeout(loadRest,150)}
     addEventListener('resize',size);size();
     if(RM)return;
-    const tick=ts=>{if((vis.heroStage===undefined||vis.heroStage>0)&&X.naturalWidth){if(started===null)started=ts;const t=ts-started-300;draw(t<0?0:t)}requestAnimationFrame(tick)};requestAnimationFrame(tick);
+    const tick=ts=>{if((vis.heroStage===undefined||vis.heroStage>0)&&ok(X[MID])){if(started===null)started=ts;const t=ts-started-300;draw(t<0?0:t)}requestAnimationFrame(tick)};requestAnimationFrame(tick);
   })();
 
   /* 01: el grano se cubre con el scroll */
