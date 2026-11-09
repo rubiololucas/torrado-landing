@@ -538,7 +538,7 @@ footer{padding:26px 0 40px;text-align:center;font:400 11px/1.8 var(--mono);lette
 
   /* hero: escáner en vivo. Dos imágenes (paquete y rayos X) cruzadas por una línea de luz, a la frecuencia de la pantalla */
   (function(){
-    const cv=$('cvHero'),ctx=cv.getContext('2d'),B=/*HBOX*/{"x0": 0.285, "x1": 0.7214, "y0": 0.0929, "y1": 0.8884}/*HBOX*/;
+    const cv=$('cvHero'),ctx=cv.getContext('2d'),B=/*HBOX*/{"x0": 0.3064, "x1": 0.7121, "y0": 0.0821, "y1": 0.8982}/*HBOX*/;
     const P=new Image(),X=new Image();P.decoding=X.decoding='async';
     let beam=null,started=null,lastT=0;const T=6000;
     const ss=t=>{t=Math.max(0,Math.min(1,t));return t*t*(3-2*t)};
