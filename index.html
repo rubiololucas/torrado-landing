@@ -500,7 +500,7 @@ footer{padding:26px 0 40px;text-align:center;font:400 11px/1.8 var(--mono);lette
     const g=form.querySelector('input[name="variation[0]"]:checked');
     if(!g){e.preventDefault();needGrind();return}
     const mode=val('mode'),k=val('packs');
-    track('CTAClick',{mode,packs:k,grind:g.value});try{const _n=s=>+String(s).replace(/\D/g,'');if(mode==='sub'){fbq('track','InitiateCheckout',{content_name:'Suscripcion Shock Coffee',content_category:'suscripcion',value:_n(P.sub[k]),currency:'ARS',num_items:+k})}else{const _o=P.once[k];fbq('track','AddToCart',{content_ids:[_o.id],content_type:'product',content_name:'Shock Coffee 250g',value:_n(_o.p),currency:'ARS',num_items:+k})}}catch(err){}try{gtag('event','cta_click',{lp:'torrado',mode,packs:k,grind:g.value})}catch(err){}
+    track('CTAClick',{mode,packs:k,grind:g.value});try{if(mode==='sub'){fbq('track','InitiateCheckout',{content_name:'Suscripcion Shock Coffee',content_category:'suscripcion',value:+String(P.sub[k]).replace(/\D/g,''),currency:'ARS',num_items:+k})}}catch(err){}try{gtag('event','cta_click',{lp:'torrado',mode,packs:k,grind:g.value})}catch(err){}
     if(mode==='sub'){
       e.preventDefault();
       const m=g.dataset.sub,c=Array.from({length:+k},()=>`clasico:Clasico:${m}`).join(',');
